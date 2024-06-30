@@ -1,6 +1,6 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 00_03
-// Using the exercise files on GitHub, by Eduardo Corpeño 
+// Using the exercise files on GitHub Codespaces, by Eduardo Corpeño 
 
 #include <iostream>
 
