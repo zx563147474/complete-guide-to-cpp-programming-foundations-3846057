@@ -1,26 +1,29 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_05
-// Type inference with auto, by Eduardo Corpeño 
+// Using Variables, by Eduardo Corpeño 
 
 #include <iostream>
-#include <typeinfo>
+
+int a, b = 5; // single line comment
+
+/* Multi
+*  line
+*  comment */
 
 int main(){
-    auto a = 8;
-    auto b = 12345678901;
-    auto c = 3.14f;
-    auto d = 3.14;
-    auto e = true;
-    auto f = 'd';
-    auto g = "C++ rocks!";
-
-    std::cout << "The type of a is " << typeid(a).name() << std::endl;
-    std::cout << "The type of b is " << typeid(b).name() << std::endl;
-    std::cout << "The type of c is " << typeid(c).name() << std::endl;
-    std::cout << "The type of d is " << typeid(d).name() << std::endl;
-    std::cout << "The type of e is " << typeid(e).name() << std::endl;
-    std::cout << "The type of f is " << typeid(f).name() << std::endl;
-    std::cout << "The type of g is " << typeid(g).name() << std::endl;
+    bool my_flag;
+    a = 7;
+    my_flag = false;
+    std::cout << "a = " << a << std::endl;
+    std::cout << "b = " << b << std::endl;
+    std::cout << "flag = " << my_flag << std::endl;
+    my_flag = true;
+    std::cout << "flag = " << my_flag << std::endl;
+    std::cout << "a + b = " << a + b << std::endl;
+    std::cout << "b - a = " << b - a << std::endl;
+    unsigned int positive;
+    positive = b - a;
+    std::cout << "b - a (unsigned) = " << positive << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

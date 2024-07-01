@@ -1,9 +1,9 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_11
-// Type Casting Examples, by Eduardo Corpeño 
+// Type inference with auto, by Eduardo Corpeño 
 
 #include <iostream>
-#include <cstdint>
+#include <typeinfo>
 
 int main(){
     

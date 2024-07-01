@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 02_06
-// Preprocessor directives, by Eduardo Corpeño 
+// Exercise 04_09
+// Strings, by Eduardo Corpeño 
 
 #include <iostream>
 

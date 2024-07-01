@@ -1,11 +1,11 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_05
-// Type inference with auto, by Eduardo Corpeño 
+// Using Variables, by Eduardo Corpeño 
 
 #include <iostream>
-#include <typeinfo>
 
 int main(){
+    std::cout << "Hi There!" << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);

@@ -1,5 +1,5 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 02_08
+// Exercise 04_01
 // Arrays, by Eduardo Corpeño 
 
 #include <iostream>

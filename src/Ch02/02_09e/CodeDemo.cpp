@@ -1,24 +1,23 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_09
-// Strings, by Eduardo Corpeño 
+// Type Casting, by Eduardo Corpeño 
 
 #include <iostream>
-#include <string>
-#include <cstring>
+#include <cstdint>
 
 int main(){
-    const size_t LENGTH1 = 25;
+    float flt;
+    int32_t sgn;
+    uint32_t unsgn;
 
-    char array_str1[LENGTH1] = "Hey guys! ";
-    char array_str2[] = "What's up?";
+    flt = -7.66;
+    sgn = flt;
+    unsgn = sgn;
 
-    std::string std_str1 = "Hi everybody! ";
-    std::string std_str2 = "How's the going?";
-
-    strncat(array_str1, array_str2, LENGTH1);
-    std::cout << array_str1 << std::endl;
-    std::cout << std_str1 + std_str2 << std::endl;
-
+    std::cout << " float: " << flt << std::endl;
+    std::cout << " int32: " << sgn << std::endl;
+    std::cout << "uint32: " << (int32_t) unsgn << std::endl;
+    
     std::cout << std::endl << std::endl;
     return (0);
 }
