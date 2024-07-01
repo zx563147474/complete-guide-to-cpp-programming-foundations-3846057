@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 03_02
 // Classes, by Eduardo Corpeño 
 

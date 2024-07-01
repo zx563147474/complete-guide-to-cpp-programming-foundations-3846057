@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Challenge 04_05
 // Calculate a GPA, by Eduardo Corpeño 
 

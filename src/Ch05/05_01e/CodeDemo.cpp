@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 05_01
 // Creating Functions, by Eduardo Corpeño 
 

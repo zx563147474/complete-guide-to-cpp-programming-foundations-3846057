@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Challenge 05_04
 // Create a Report Card Function, by Eduardo Corpeño 
 

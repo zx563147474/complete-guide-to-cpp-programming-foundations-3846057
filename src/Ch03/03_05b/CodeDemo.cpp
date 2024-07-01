@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 03_05
 // Using Several Source Files, by Eduardo Corpeño 
 

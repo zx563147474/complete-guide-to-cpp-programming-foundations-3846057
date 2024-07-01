@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Challenge Solution 06_04
 // Upgrade to work with files, by Eduardo Corpeño 
 

@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 02_12
 // Enumerations, by Eduardo Corpeño 
 

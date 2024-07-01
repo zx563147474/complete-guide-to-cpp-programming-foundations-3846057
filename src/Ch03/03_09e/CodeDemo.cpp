@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 03_09
 // Vectors, by Eduardo Corpeño 
 

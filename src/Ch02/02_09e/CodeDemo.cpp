@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 02_09
 // Strings, by Eduardo Corpeño 
 

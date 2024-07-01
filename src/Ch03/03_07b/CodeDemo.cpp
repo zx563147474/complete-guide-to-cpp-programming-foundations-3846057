@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 03_07
 // Using Objects with Pointers, by Eduardo Corpeño 
 

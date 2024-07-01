@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Challenge 02_13
 // Calculate an Average, by Eduardo Corpeño 
 

@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 02_05
 // Type inference with auto, by Eduardo Corpeño 
 

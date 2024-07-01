@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 02_03
 // Using Variables, by Eduardo Corpeño 
 

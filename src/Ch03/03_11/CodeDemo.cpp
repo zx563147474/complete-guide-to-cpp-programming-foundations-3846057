@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Challenge 03_11
 // Create some classes, by Eduardo Corpeño 
 

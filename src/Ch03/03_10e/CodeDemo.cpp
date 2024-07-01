@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 03_10
 // Using Objects with Vectors, by Eduardo Corpeño 
 

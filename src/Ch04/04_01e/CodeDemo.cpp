@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 04_01
 // If Statements, by Eduardo Corpeño 
 

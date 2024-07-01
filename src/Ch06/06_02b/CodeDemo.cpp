@@ -1,4 +1,4 @@
-// Learning C++ 
+// Complete Guide to C++ Programming Foundations
 // Exercise 06_02
 // Opening a text file for writing, by Eduardo Corpeño 
 
