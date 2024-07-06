@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 07_04
-// Creating Functions, by Eduardo Corpeño 
+// Constructors and Destructors, by Eduardo Corpeño 
 
 #include <iostream>
 #include <vector>

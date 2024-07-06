@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 04_06
-// Vectors, by Eduardo Corpeño 
+// The Vector Class, by Eduardo Corpeño 
 
 #include <vector>
 #include <iostream>

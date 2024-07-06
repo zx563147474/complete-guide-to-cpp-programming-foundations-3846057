@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Challenge 07_10
-// Create some classes, by Eduardo Corpeño 
+// Create a Complex Number Class, by Eduardo Corpeño 
 
 #include <iostream>
 #include "records.h"

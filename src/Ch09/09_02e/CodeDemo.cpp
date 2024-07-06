@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 09_02
-// Opening a text file for reading, by Eduardo Corpeño 
+// Opening a Text File for Reading, by Eduardo Corpeño 
 
 #include <iostream>
 #include <string>

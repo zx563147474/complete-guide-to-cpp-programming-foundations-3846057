@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 06_04
-// Function Parameters, by Eduardo Corpeño 
+// Calling Functions, by Eduardo Corpeño 
 
 #include <iostream>
 

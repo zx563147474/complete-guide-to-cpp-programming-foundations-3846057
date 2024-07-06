@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 07_02
-// Classes, by Eduardo Corpeño 
+// Data Members, by Eduardo Corpeño 
 
 #include <iostream>
 #include <string>

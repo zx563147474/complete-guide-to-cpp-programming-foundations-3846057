@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Challenge 09_04
-// Upgrade to work with files, by Eduardo Corpeño 
+// File Handling, by Eduardo Corpeño 
 
 #include <iostream>
 #include <vector>

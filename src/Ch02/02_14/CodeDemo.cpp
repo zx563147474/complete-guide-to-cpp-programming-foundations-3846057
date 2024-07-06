@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
-// Challenge 02_14
-// Calculate an Average, by Eduardo Corpeño 
+// Challenge 03_08
+// Data Types, by Eduardo Corpeño 
 
 #include <iostream>
 

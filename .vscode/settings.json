@@ -16,6 +16,7 @@
   "editor.autoClosingBrackets": "never",
   "emmet.triggerExpansionOnTab": true,
   "explorer.openEditors.visible": 10,
+  "explorer.compactFolders":false,
   "files.autoSave": "afterDelay",
   "screencastMode.onlyKeyboardShortcuts": true,
   "terminal.integrated.fontSize": 18,
