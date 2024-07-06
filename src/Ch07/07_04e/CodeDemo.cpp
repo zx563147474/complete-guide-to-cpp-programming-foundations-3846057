@@ -28,12 +28,14 @@ int main(){
     for (Grade& grd : grades)
         if (grd.get_student_id() == id){
             // TODO: get numeric grade
+            float num_grd = 0.0f;
             // TODO: credits += get_credits
-            points += num_grd * courses[j].get_credits();
+            points += num_grd * courses[0].get_credits();
         }
     GPA = points / credits;
 
     // TODO: get student name
+    std::string student_str = "";
     std::cout << "The GPA for " << student_str << " is " << GPA << std::endl;
     
     std::cout << std::endl << std::endl;
