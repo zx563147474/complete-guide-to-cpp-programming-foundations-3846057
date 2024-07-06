@@ -1,40 +1,32 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 05_01
-// Creating Functions, by Eduardo Corpeño 
+// If Statements, by Eduardo Corpeño 
 
 #include <iostream>
-#include <vector>
-#include "records.h"
 
 int main(){
-    float GPA = 0.0f;
-    int id;
+    int a = 1023;
+    bool flag = false;
+    char lttr = 'd';
 
-    std::vector<Student> students = {Student(1, "George P. Burdell"),
-                                    Student(2, "Nancy Rhodes")};
+    if (a > 1000)
+        std::cout << "Warning: a is over 1000." << std::endl;
 
-    std::vector<Course> courses = {Course(1, "Algebra", 5),
-                                Course(2, "Physics", 4),
-                                Course(3, "English", 3),
-                                Course(4, "Economics", 4)};
+    if (a % 2)
+        std::cout << "a is odd" << std::endl;
+    else
+        std::cout << "a is even" << std::endl;
 
-    std::vector<Grade> grades = {Grade(1, 1, 'B'), Grade(1, 2, 'A'), Grade(1, 3, 'C'),
-                                Grade(2, 1, 'A'), Grade(2, 2, 'A'), Grade(2, 4, 'B')};
+    std::cout << "The letter " << lttr << " is ";
+    if (lttr != 'a' && lttr != 'e' && lttr != 'i' && lttr != 'o' && lttr != 'u' &&
+        lttr != 'A' && lttr != 'E' && lttr != 'I' && lttr != 'O' && lttr != 'U')
+        std::cout << "not ";
+    std::cout << "a vowel." << std::endl;
 
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
-
-    float points = 0.0f, credits = 0.0f;
-    for (Grade& grd : grades)
-        if (grd.get_student_id() == id){
-            // TODO: get numeric grade
-            // TODO: credits += get_credits
-            points += num_grd * courses[j].get_credits();
-        }
-    GPA = points / credits;
-
-    // TODO: get student name
-    std::cout << "The GPA for " << student_str << " is " << GPA << std::endl;
+    if (flag)
+        std::cout << "The flag is true!" << std::endl;
+    else
+        std::cout << "The flag is false!" << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);

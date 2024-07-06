@@ -1,33 +1,32 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 04_01
-// If Statements, by Eduardo Corpeño 
+// Arrays, by Eduardo Corpeño 
 
 #include <iostream>
 
+// #define AGE_LENGTH 4
+
 int main(){
-    int a = 1023;
-    bool flag = false;
-    char lttr = 'd';
+    const size_t AGE_LENGTH = 4;
 
-    if (a > 1000)
-        std::cout << "Warning: a is over 1000." << std::endl;
+    int age[AGE_LENGTH];
+    float temperature[] = {31.5, 32.7, 38.9};
 
-    if (a % 2)
-        std::cout << "a is odd" << std::endl;
-    else
-        std::cout << "a is even" << std::endl;
+    age[0] = 25;
+    age[1] = 20;
+    age[2] = 19;
+    age[3] = 19;
 
-    std::cout << "The letter " << lttr << " is ";
-    if (lttr != 'a' && lttr != 'e' && lttr != 'i' && lttr != 'o' && lttr != 'u' &&
-        lttr != 'A' && lttr != 'E' && lttr != 'I' && lttr != 'O' && lttr != 'U')
-        std::cout << "not ";
-    std::cout << "a vowel." << std::endl;
+    std::cout << "The Age array has " << AGE_LENGTH << " elements." << std::endl;
+    std::cout << "Age[0] = " << age[0] << std::endl;
+    std::cout << "Age[1] = " << age[1] << std::endl;
+    std::cout << "Age[2] = " << age[2] << std::endl;
+    std::cout << "Age[3] = " << age[3] << std::endl;
+    std::cout << std::endl;
+    std::cout << "Temp[0] = " << temperature[0] << std::endl;
+    std::cout << "Temp[1] = " << temperature[1] << std::endl;
+    std::cout << "Temp[2] = " << temperature[2] << std::endl;
 
-    if (flag)
-        std::cout << "The flag is true!" << std::endl;
-    else
-        std::cout << "The flag is false!" << std::endl;
-    
     std::cout << std::endl << std::endl;
     return (0);
 }

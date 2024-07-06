@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 04_01
-// If Statements, by Eduardo Corpeño 
+// Arrays, by Eduardo Corpeño 
 
 #include <iostream>
 

@@ -1,39 +1,21 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 04_02
-// Switch Statements, by Eduardo Corpeño 
+// Pointers, by Eduardo Corpeño 
 
 #include <iostream>
+#include <string>
 
 int main(){
-    float operand_1, operand_2, result;
-    char operation;
+    int a = 37;
+    int *ptr;
 
-    std::cout << "Enter operand 1: " << std::flush;
-    std::cin >> operand_1;
-    std::cout << "Enter operand 2: " << std::flush;
-    std::cin >> operand_2;
-    std::cout << "Choose operation [ + - * / ]: " << std::flush;
-    std::cin >> operation;
+    ptr = &a;
 
-    switch (operation){
-        case '+':
-            result = operand_1 + operand_2;
-            break;
-        case '-':
-            result = operand_1 - operand_2;
-            break;
-        case '*':
-            result = operand_1 * operand_2;
-            break;
-        case '/':
-            result = operand_1 / operand_2;
-            break;
-        default:
-            result = operand_1 + operand_2;
-            break;
-    }
-
-    std::cout << "The result is " << result << std::endl;
+    std::cout << "           The content of a is " << a << std::endl;
+    std::cout << "    ptr is pointing to address " << ptr << std::endl;
+    std::cout << "           The address of a is " << &a << std::endl;
+    std::cout << "Where ptr is pointing, we have " << *ptr << std::endl;
+    std::cout << "         The address of ptr is " << &ptr << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);

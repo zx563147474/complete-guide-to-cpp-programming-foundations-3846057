@@ -1,42 +1,40 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 05_03
-// Using Functions, by Eduardo Corpeño 
+// Switch Statements, by Eduardo Corpeño 
 
 #include <iostream>
-#include <vector>
-#include "records.h"
-
-void initialize(StudentRecords&);
 
 int main(){
-    int id;
-    StudentRecords SR;
-    
-    initialize(SR);
+    float operand_1, operand_2, result;
+    char operation;
 
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
+    std::cout << "Enter operand 1: " << std::flush;
+    std::cin >> operand_1;
+    std::cout << "Enter operand 2: " << std::flush;
+    std::cin >> operand_2;
+    std::cout << "Choose operation [ + - * / ]: " << std::flush;
+    std::cin >> operation;
 
-    std::string student_str = SR.get_student_name(id);
-    std::cout << "The GPA for " << student_str << " is " << SR.get_GPA(id) << std::endl;
+    switch (operation){
+        case '+':
+            result = operand_1 + operand_2;
+            break;
+        case '-':
+            result = operand_1 - operand_2;
+            break;
+        case '*':
+            result = operand_1 * operand_2;
+            break;
+        case '/':
+            result = operand_1 / operand_2;
+            break;
+        default:
+            result = operand_1 + operand_2;
+            break;
+    }
+
+    std::cout << "The result is " << result << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);
-}
-
-void initialize(StudentRecords& srec){
-    srec.add_student(1, "George P. Burdell");
-    srec.add_student(2, "Nancy Rhodes");
-
-    srec.add_course(1, "Algebra", 5);
-    srec.add_course(2, "Physics", 4);
-    srec.add_course(3, "English", 3);
-    srec.add_course(4, "Economics", 4);
-
-    srec.add_grade(1, 1, 'B');
-    srec.add_grade(1, 2, 'A');
-    srec.add_grade(1, 3, 'C');
-    srec.add_grade(2, 1, 'A'); 
-    srec.add_grade(2, 2, 'A');
-    srec.add_grade(2, 4, 'B');
 }
