@@ -1,26 +1,20 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_12
-// Type Inference with auto, by Eduardo Corpeño 
+// Enumerations, by Eduardo Corpeño 
 
 #include <iostream>
-#include <typeinfo>
+#include <cstdint>
+
+enum class cow_purpose {dairy, meat, hide, pet};
+enum class grocery_section {canned, frozen, meat, laundry, dairy, bakery};
 
 int main(){
-    auto a = 8;
-    auto b = 12345678901;
-    auto c = 3.14f;
-    auto d = 3.14;
-    auto e = true;
-    auto f = 'd';
-    auto g = "C++ rocks!";
+    int meat = 8;
+    cow_purpose a;
 
-    std::cout << "The type of a is " << typeid(a).name() << std::endl;
-    std::cout << "The type of b is " << typeid(b).name() << std::endl;
-    std::cout << "The type of c is " << typeid(c).name() << std::endl;
-    std::cout << "The type of d is " << typeid(d).name() << std::endl;
-    std::cout << "The type of e is " << typeid(e).name() << std::endl;
-    std::cout << "The type of f is " << typeid(f).name() << std::endl;
-    std::cout << "The type of g is " << typeid(g).name() << std::endl;
+    a = cow_purpose::meat;
+
+    std::cout << "a = " << (int) a << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

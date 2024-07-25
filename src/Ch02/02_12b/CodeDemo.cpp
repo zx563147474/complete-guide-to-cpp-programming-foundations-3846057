@@ -1,12 +1,19 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_12
-// Type Inference with auto, by Eduardo Corpeño 
+// Enumerations, by Eduardo Corpeño 
 
 #include <iostream>
-#include <typeinfo>
+#include <cstdint>
+
+enum cow_purpose {dairy, meat, hide, pet};
 
 int main(){
-    
+    int a;
+
+    a = meat;
+
+    std::cout << "a = " << a << std::endl;
+
     std::cout << std::endl << std::endl;
     return (0);
 }

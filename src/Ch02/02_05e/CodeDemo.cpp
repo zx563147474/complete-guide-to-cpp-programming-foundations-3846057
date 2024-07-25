@@ -4,11 +4,7 @@
 
 #include <iostream>
 
-int a, b = 5; // single line comment
-
-/* Multi
-*  line
-*  comment */
+int a, b = 5;
 
 int main(){
     bool my_flag;
