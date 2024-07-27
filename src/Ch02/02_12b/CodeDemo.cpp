@@ -5,14 +5,15 @@
 #include <iostream>
 #include <cstdint>
 
-enum cow_purpose {dairy, meat, hide, pet};
+enum asset_type {texture, sound, animation, script};
+enum menu_section {background, music, sound, controls, texture};
 
 int main(){
-    int a;
+    int asset;
 
-    a = meat;
+    asset = sound;
 
-    std::cout << "a = " << a << std::endl;
+    std::cout << "asset = " << asset << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

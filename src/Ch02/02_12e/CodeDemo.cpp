@@ -5,16 +5,16 @@
 #include <iostream>
 #include <cstdint>
 
-enum class cow_purpose {dairy, meat, hide, pet};
-enum class grocery_section {canned, frozen, meat, laundry, dairy, bakery};
+enum class asset_type {texture, sound, animation, script};
+enum class menu_section {background, music, sound, controls, texture};
 
 int main(){
-    int meat = 8;
-    cow_purpose a;
+    int asset_value = 8;
+    asset_type game_asset;
 
-    a = cow_purpose::meat;
+    game_asset = asset_type::sound;
 
-    std::cout << "a = " << (int) a << std::endl;
+    std::cout << "game_asset = " << (int) game_asset << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);
