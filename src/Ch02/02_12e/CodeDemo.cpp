@@ -9,12 +9,12 @@ enum class asset_type {texture, sound, animation, script};
 enum class menu_section {background, music, sound, controls, texture};
 
 int main(){
-    int asset_value = 8;
-    asset_type game_asset;
+    int sound = 8;
+    asset_type asset_value;
 
-    game_asset = asset_type::sound;
+    asset_value = asset_type::sound;
 
-    std::cout << "game_asset = " << (int) game_asset << std::endl;
+    std::cout << "asset_value = " << (int) asset_value << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);
