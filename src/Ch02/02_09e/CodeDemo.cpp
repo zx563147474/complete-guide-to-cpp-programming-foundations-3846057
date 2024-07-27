@@ -6,17 +6,17 @@
 #include <cstdint>
 
 int main(){
-    float flt;
-    int32_t sgn;
-    uint32_t unsgn;
+    float sprite_x;
+    int32_t screen_x;
+    uint32_t screen_id;
 
-    flt = -7.66;
-    sgn = flt;
-    unsgn = sgn;
+    sprite_x = -123.45f;
+    screen_x = sprite_x;
+    screen_id = screen_x;
 
-    std::cout << " float: " << flt << std::endl;
-    std::cout << " int32: " << sgn << std::endl;
-    std::cout << "uint32: " << (int32_t) unsgn << std::endl;
+    std::cout << " Sprite X: " << sprite_x << std::endl;
+    std::cout << " Screen X: " << screen_x << std::endl;
+    std::cout << "Screen ID: " << (int32_t) screen_id << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);
