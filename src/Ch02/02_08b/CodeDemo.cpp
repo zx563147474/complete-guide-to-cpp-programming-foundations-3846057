@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+enum class character_role {protagonist, antagonist, sidekick, npc};
+
 int main(){
     
     std::cout << std::endl << std::endl;

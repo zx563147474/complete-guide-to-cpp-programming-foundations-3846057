@@ -5,22 +5,22 @@
 #include <iostream>
 #include <string>
 
-enum class cow_purpose {dairy, meat, hide, pet};
+enum class character_role {protagonist, antagonist, sidekick, npc};
 
-struct cow{
+struct game_character {
     std::string name;
-    int age;
-    cow_purpose purpose;
+    int level;
+    character_role role;
 };
 
 int main(){
-    cow my_cow;
-    my_cow.age = 5;
-    my_cow.name = "Betsy";
-    my_cow.purpose = cow_purpose::dairy;
-    std::cout << my_cow.name << " is a type-" << (int) my_cow.purpose << " cow." << std::endl;
-    std::cout << my_cow.name << " is " << my_cow.age << " years old." << std::endl;
+    game_character buddy;
+    buddy.name = "Alex";
+    buddy.level = 10;
+    buddy.role = character_role::sidekick;
     
+    std::cout << buddy.name << " is a level " << buddy.level << " character with the role of " << (int) buddy.role << "." << std::endl;
+
     std::cout << std::endl << std::endl;
     return (0);
 }
