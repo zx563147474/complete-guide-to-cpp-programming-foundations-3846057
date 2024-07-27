@@ -6,7 +6,6 @@
 #include <cstdint>
 
 enum asset_type {texture, sound, animation, script};
-enum menu_section {background, music, sound, controls, texture};
 
 int main(){
     int asset;
