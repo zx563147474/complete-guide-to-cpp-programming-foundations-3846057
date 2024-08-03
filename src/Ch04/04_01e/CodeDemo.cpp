@@ -4,28 +4,31 @@
 
 #include <iostream>
 
-// #define AGE_LENGTH 4
+// #define LEVEL_COUNT 4
 
 int main(){
-    const size_t AGE_LENGTH = 4;
+    const size_t LEVEL_COUNT = 4;
 
-    int age[AGE_LENGTH];
-    float temperature[] = {31.5, 32.7, 38.9};
+    int enemies[LEVEL_COUNT];
+    float levelDifficulty[] = {1.0, 1.5, 2.0, 2.5};
 
-    age[0] = 25;
-    age[1] = 20;
-    age[2] = 19;
-    age[3] = 19;
+    enemies[0] = 10;
+    enemies[1] = 15;
+    enemies[2] = 20;
+    enemies[3] = 25;
 
-    std::cout << "The Age array has " << AGE_LENGTH << " elements." << std::endl;
-    std::cout << "Age[0] = " << age[0] << std::endl;
-    std::cout << "Age[1] = " << age[1] << std::endl;
-    std::cout << "Age[2] = " << age[2] << std::endl;
-    std::cout << "Age[3] = " << age[3] << std::endl;
+    std::cout << "The game has " << LEVEL_COUNT << " levels:" << std::endl;
+    std::cout << "Level 1: " << enemies[0] << " enemies" << std::endl;
+    std::cout << "Level 2: " << enemies[1] << " enemies" << std::endl;
+    std::cout << "Level 3: " << enemies[2] << " enemies" << std::endl;
+    std::cout << "Level 4: " << enemies[3] << " enemies" << std::endl;
+
     std::cout << std::endl;
-    std::cout << "Temp[0] = " << temperature[0] << std::endl;
-    std::cout << "Temp[1] = " << temperature[1] << std::endl;
-    std::cout << "Temp[2] = " << temperature[2] << std::endl;
+    std::cout << "Level difficulties are set as follows:" << std::endl;
+    std::cout << "Level 1: " << levelDifficulty[0] << std::endl;
+    std::cout << "Level 2: " << levelDifficulty[1] << std::endl;
+    std::cout << "Level 3: " << levelDifficulty[2] << std::endl;
+    std::cout << "Level 4: " << levelDifficulty[3] << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

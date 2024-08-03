@@ -4,26 +4,32 @@
 
 #include <iostream>
 
-int a, b = 5; // single line comment
-
-/* Multi
-*  line
-*  comment */
-
 int main(){
-    bool my_flag;
-    a = 7;
-    my_flag = false;
-    std::cout << "a = " << a << std::endl;
-    std::cout << "b = " << b << std::endl;
-    std::cout << "flag = " << my_flag << std::endl;
-    my_flag = true;
-    std::cout << "flag = " << my_flag << std::endl;
-    std::cout << "a + b = " << a + b << std::endl;
-    std::cout << "b - a = " << b - a << std::endl;
-    unsigned int positive;
-    positive = b - a;
-    std::cout << "b - a (unsigned) = " << positive << std::endl;
+    int ammo = 30;
+    int zombies_incoming = 20;
+
+    std::cout << "Initial Ammo: " << ammo << std::endl;
+    std::cout << "Initial Zombies Defeated: " << zombies_incoming << std::endl;
+
+    // Addition assignment
+    ammo += 10;
+    std::cout << "Ammo after finding more: " << ammo << std::endl;
+
+    // Subtraction assignment
+    ammo -= 5;
+    std::cout << "Ammo after using some: " << ammo << std::endl;
+
+    // Multiplication assignment
+    zombies_incoming *= 2;
+    std::cout << "Zombies duplicated after timeout: " << zombies_incoming << std::endl;
+
+    // Division assignment
+    ammo /= 2;
+    std::cout << "Ammo after sharing with a friend: " << ammo << std::endl;
+
+    // Remainder assignment
+    ammo %= 6;
+    std::cout << "Ammo left in magazine after losing backpack: " << ammo << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

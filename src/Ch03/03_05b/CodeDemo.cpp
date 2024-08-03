@@ -5,8 +5,9 @@
 #include <iostream>
 
 int main(){
-    std::cout << "Hi There!" << std::endl;
-    
+    int ammo = 30;
+    int zombies_incoming = 20;
+
     std::cout << std::endl << std::endl;
     return (0);
 }

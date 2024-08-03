@@ -4,26 +4,24 @@
 
 #include <iostream>
 
-int a, b = 5; // single line comment
-
-/* Multi
-*  line
-*  comment */
-
 int main(){
-    bool my_flag;
-    a = 7;
-    my_flag = false;
-    std::cout << "a = " << a << std::endl;
-    std::cout << "b = " << b << std::endl;
-    std::cout << "flag = " << my_flag << std::endl;
-    my_flag = true;
-    std::cout << "flag = " << my_flag << std::endl;
-    std::cout << "a + b = " << a + b << std::endl;
-    std::cout << "b - a = " << b - a << std::endl;
-    unsigned int positive;
-    positive = b - a;
-    std::cout << "b - a (unsigned) = " << positive << std::endl;
+    int player_score = 10;
+    int player_lives = 3;
+
+    std::cout << "Initial Score: " << player_score << std::endl;
+    std::cout << "Initial Lives: " << player_lives << std::endl;
+
+    // Postfix increment
+    std::cout << "Score after postfix increment: " << player_score++ << std::endl;
+
+    // Prefix increment
+    std::cout << "Score after prefix increment: " << ++player_score << std::endl;
+
+    // Postfix decrement
+    std::cout << "Lives after postfix decrement: " << player_lives-- << std::endl;
+
+    // Prefix decrement
+    std::cout << "Lives after prefix decrement: " << --player_lives << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

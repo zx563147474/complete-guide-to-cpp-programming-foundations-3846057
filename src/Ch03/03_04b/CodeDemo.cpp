@@ -5,8 +5,9 @@
 #include <iostream>
 
 int main(){
-    std::cout << "Hi There!" << std::endl;
-    
+    int player_score = 10;
+    int player_lives = 3;
+
     std::cout << std::endl << std::endl;
     return (0);
 }

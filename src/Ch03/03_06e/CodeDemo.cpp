@@ -3,20 +3,24 @@
 // Preprocessor Directives, by Eduardo Corpeño 
 
 #include <iostream>
-#include <string>
 #include <cstdint>
 
-#define CAPACITY 5000
+#define MAX_AMMO 500
 #define DEBUG
 
 int main(){
-    int32_t large = CAPACITY;
-    uint8_t small = 37;
+    int32_t ammo = MAX_AMMO / 5;
+    uint8_t health_items = 5;
+
 #ifdef DEBUG
-    std::cout << "[About to perform the addition]" << std::endl;
+    std::cout << "[DEBUG] Starting game simulation..." << std::endl;
 #endif
-    large += small; // Shorthand for "large = large + small;"
-    std::cout << "The large integer is " << large << std::endl;
+
+    ammo += 200; // Player finds extra ammo
+    health_items -= 2; // Player uses some health items
+
+    std::cout << "Final Ammo: " << ammo << std::endl;
+    std::cout << "Remaining Health Items: " << health_items << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);
