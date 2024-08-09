@@ -7,17 +7,15 @@
 #include <string>
 
 int main(){
-    std::vector<int> primes;
+    std::vector<std::string> checkpoints = {"Start", "Forest", "Castle"};
 
-    primes.push_back(2);
-    primes.push_back(3);
-    primes.push_back(5);
-    primes.push_back(7);
-    primes.push_back(11);
-    std::cout << "The vector has " << primes.size() << " elements." << std::endl;
-    std::cout << "The element at index 2 is " << primes[2] << std::endl;
-    primes[2] = 13;
-    std::cout << "The element at index 2 is " << primes[2] << std::endl;
+    checkpoints.push_back("Cave");
+    checkpoints.push_back("Finish");
+
+    std::cout << "The game has " << checkpoints.size() << " checkpoints." << std::endl;
+    std::cout << "The checkpoint at index 2 is " << checkpoints[2] << std::endl;
+    checkpoints[2] = "Dark Castle";
+    std::cout << "Checkpoint updated to: " << checkpoints[2] << std::endl;
 
     std::cout << std::endl << std::endl;
     return (0);

@@ -3,20 +3,16 @@
 // How Arrays and Pointers are Related, by Eduardo Corpeño 
 
 #include <iostream>
-#include <string>
 
 int main(){
-    int a = 37;
-    int *ptr;
+    int highScores[] = {850, 745, 1220, 990};  // High scores in various game stages
+    int* scorePtr = highScores;               // Pointer initialized to the address of the array
 
-    ptr = &a;
+    std::cout << "Initial high score: " << *scorePtr << std::endl;  // Display the first high score using pointer
 
-    std::cout << "           The content of a is " << a << std::endl;
-    std::cout << "    ptr is pointing to address " << ptr << std::endl;
-    std::cout << "           The address of a is " << &a << std::endl;
-    std::cout << "Where ptr is pointing, we have " << *ptr << std::endl;
-    std::cout << "         The address of ptr is " << &ptr << std::endl;
-    
+    std::cout << "Second high score using pointer: " << *(scorePtr + 1) << std::endl;
+    std::cout << "Third high score using array notation: " << scorePtr[2] << std::endl;
+
     std::cout << std::endl << std::endl;
     return (0);
 }
