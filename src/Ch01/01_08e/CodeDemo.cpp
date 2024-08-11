@@ -12,5 +12,5 @@ int main(){
     std::cout << "Nice to meet you, " << name << "!" << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

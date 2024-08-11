@@ -32,5 +32,5 @@ int main(){
     std::cout << "Ammo left in magazine after losing backpack: " << ammo << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

@@ -4,21 +4,19 @@
 
 #include <iostream>
 #include <string>
-#include <cstring>
 
 int main(){
-    const size_t LENGTH1 = 25;
+    std::string racer1 = "Speedy";
+    std::string racer2 = "Lightning";
+    std::string raceResult;
 
-    char array_str1[LENGTH1] = "Hey guys! ";
-    char array_str2[] = "What's up?";
+    std::cout << "Racer 1: " << racer1 << std::endl;
+    std::cout << "Racer 2: " << racer2 << std::endl;
 
-    std::string std_str1 = "Hi everybody! ";
-    std::string std_str2 = "How's the going?";
+    raceResult = "And the winner is " + racer1;
 
-    strncat(array_str1, array_str2, LENGTH1);
-    std::cout << array_str1 << std::endl;
-    std::cout << std_str1 + std_str2 << std::endl;
+    std::cout << raceResult << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

@@ -20,5 +20,5 @@ int main(){
     std::cout << "Last imaginary: " << (points.end() - 1)->imag() << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

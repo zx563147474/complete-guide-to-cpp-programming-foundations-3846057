@@ -3,22 +3,27 @@
 // C Strings, by Eduardo Corpeño 
 
 #include <iostream>
-#include <string>
 #include <cstring>
 
 int main(){
-    const size_t LENGTH1 = 25;
+    const size_t LENGTH = 50;
+    char racer1[] = "Speedy";
+    char racer2[LENGTH];
+    char raceResult[LENGTH * 2];
 
-    char array_str1[LENGTH1] = "Hey guys! ";
-    char array_str2[] = "What's up?";
+    strncpy(racer2, "Lightning", sizeof(racer2) - 1);
+    racer2[sizeof(racer2) - 1] = '\0';
 
-    std::string std_str1 = "Hi everybody! ";
-    std::string std_str2 = "How's the going?";
+    std::cout << "Racer 1: " << racer1 << std::endl;
+    std::cout << "Racer 2: " << racer2 << std::endl;
 
-    strncat(array_str1, array_str2, LENGTH1);
-    std::cout << array_str1 << std::endl;
-    std::cout << std_str1 + std_str2 << std::endl;
+    strncpy(raceResult, "And the winner is ", sizeof(raceResult) - 1);
+    raceResult[sizeof(raceResult) - 1] = '\0';
+
+    strncat(raceResult, racer1, sizeof(raceResult) - strlen(raceResult) - 1);
+
+    std::cout << raceResult << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

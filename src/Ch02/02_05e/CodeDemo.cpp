@@ -22,5 +22,5 @@ int main(){
     std::cout << "b - a (unsigned) = " << positive << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

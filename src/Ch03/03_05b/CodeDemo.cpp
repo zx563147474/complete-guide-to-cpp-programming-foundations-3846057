@@ -9,5 +9,5 @@ int main(){
     int zombies_incoming = 20;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

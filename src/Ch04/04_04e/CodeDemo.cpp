@@ -31,5 +31,5 @@ int main(){
     delete elapsed_seconds;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

@@ -31,5 +31,5 @@ int main(){
     std::cout << "Level 4: " << levelDifficulty[3] << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

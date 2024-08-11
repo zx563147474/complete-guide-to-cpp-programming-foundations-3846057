@@ -9,5 +9,5 @@ int main(){
     int player_lives = 3;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

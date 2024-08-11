@@ -11,5 +11,5 @@ int main(){
     std::cout << "Initial high score: " << *scorePtr << std::endl;  // Display the first high score using pointer
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

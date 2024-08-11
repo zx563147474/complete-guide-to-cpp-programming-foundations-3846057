@@ -23,5 +23,5 @@ int main(){
     std::cout << "The type of game_title is " << typeid(game_title).name() << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

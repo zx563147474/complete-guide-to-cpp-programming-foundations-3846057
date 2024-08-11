@@ -23,5 +23,5 @@ int main(){
     std::cout << "Remaining Health Items: " << health_items << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

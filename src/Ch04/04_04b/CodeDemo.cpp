@@ -27,5 +27,5 @@ int main(){
     std::cout << "Reaction time: " << elapsed_seconds.count() << "s" << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

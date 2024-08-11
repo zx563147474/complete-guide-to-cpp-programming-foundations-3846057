@@ -15,5 +15,5 @@ int main(){
     std::cout << "asset_value = " << asset_value << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

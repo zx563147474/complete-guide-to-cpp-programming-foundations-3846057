@@ -23,5 +23,5 @@ int main(){
     std::cout << "Fractional part: " << (int)((weight - (int)weight) * 10000) << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

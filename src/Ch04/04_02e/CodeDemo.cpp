@@ -18,5 +18,5 @@ int main(){
     std::cout << "         The address of ptr is " << &ptr << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

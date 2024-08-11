@@ -19,5 +19,5 @@ int main(){
     std::cout << "Screen ID: " << (int32_t) screen_id << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

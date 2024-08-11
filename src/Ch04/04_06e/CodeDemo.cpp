@@ -18,5 +18,5 @@ int main(){
     std::cout << "Checkpoint updated to: " << checkpoints[2] << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

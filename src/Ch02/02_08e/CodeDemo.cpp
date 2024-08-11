@@ -22,5 +22,5 @@ int main(){
     std::cout << buddy.name << " is a level " << buddy.level << " character with the role of " << (int) buddy.role << "." << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

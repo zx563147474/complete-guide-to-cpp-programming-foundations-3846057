@@ -14,5 +14,5 @@ int main(){
     std::cout << "Third high score using array notation: " << scorePtr[2] << std::endl;
 
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }
