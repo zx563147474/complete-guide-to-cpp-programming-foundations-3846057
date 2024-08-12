@@ -1,19 +1,12 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_12
-// Enumerations, by Eduardo Corpeño 
+// Type Inference with auto, by Eduardo Corpeño 
 
 #include <iostream>
-#include <cstdint>
-
-enum asset_type {texture, sound, animation, script};
+#include <typeinfo>
 
 int main(){
-    int asset_value;
-
-    asset_value = sound;
-
-    std::cout << "asset_value = " << asset_value << std::endl;
-
+    
     std::cout << std::endl << std::endl;
     return 0;
 }

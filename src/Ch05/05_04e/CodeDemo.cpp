@@ -6,21 +6,21 @@
 #include <vector>
 
 int main(){
-    std::vector<int> numbers = {12, 25, 31, 47, 58};
+    std::vector<int> playerScores = {12, 25, 31, 47, 58};
 
-    auto ptr = numbers.begin();
+    auto scorePtr = playerScores.begin();
     
-    while (ptr != numbers.end()){
-        std::cout << *ptr << " ";
-        ptr = next(ptr, 1);
+    while (scorePtr != playerScores.end()){
+        std::cout << *scorePtr << " ";
+        scorePtr = next(scorePtr, 1);
     }
     std::cout << std::endl;
 
     int i = 0;
     do{
-        std::cout << numbers[i] << " ";
+        std::cout << playerScores[i] << " ";
         i++;
-    } while (i < numbers.size());
+    } while (i < playerScores.size());
     std::cout << std::endl;
     
     std::cout << std::endl << std::endl;

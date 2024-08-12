@@ -1,27 +1,23 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_10
-// Type Casting Examples, by Eduardo Corpeño 
+// Type Casting, by Eduardo Corpeño 
 
 #include <iostream>
 #include <cstdint>
 
 int main(){
-    int fahrenheit = 100;
-    int celsius;
+    float sprite_x;
+    int32_t screen_x;
+    uint32_t screen_id;
 
-    celsius = ((float)5 / 9.0) * (fahrenheit - 32);
+    sprite_x = -123.45f;
+    screen_x = sprite_x;
+    screen_id = screen_x;
 
-    std::cout << std::endl;
-    std::cout << "Fahrenheit: " << fahrenheit << std::endl;
-    std::cout << "Celsius   : " << celsius << std::endl;
-
-    float weight = 10.99;
+    std::cout << " Sprite X: " << sprite_x << std::endl;
+    std::cout << " Screen X: " << screen_x << std::endl;
+    std::cout << "Screen ID: " << (int32_t) screen_id << std::endl;
     
-    std::cout << std::endl;
-    std::cout << "Float          : " << weight << std::endl;
-    std::cout << "Integer part   : " << (int) weight << std::endl;
-    std::cout << "Fractional part: " << (int)((weight - (int)weight) * 10000) << std::endl;
-
     std::cout << std::endl << std::endl;
     return 0;
 }

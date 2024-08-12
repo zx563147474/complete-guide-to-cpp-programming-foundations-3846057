@@ -1,25 +1,20 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_08
-// Structures, by Eduardo Corpeño 
+// Enumerations, by Eduardo Corpeño 
 
 #include <iostream>
-#include <string>
+#include <cstdint>
 
-enum class character_role {protagonist, antagonist, sidekick, npc};
-
-struct game_character {
-    std::string name;
-    int level;
-    character_role role;
-};
+enum class asset_type {texture, sound, animation, script};
+enum class menu_section {background, music, sound, controls, texture};
 
 int main(){
-    game_character buddy;
-    buddy.name = "Alex";
-    buddy.level = 10;
-    buddy.role = character_role::sidekick;
-    
-    std::cout << buddy.name << " is a level " << buddy.level << " character with the role of " << (int) buddy.role << "." << std::endl;
+    int sound = 8;
+    asset_type asset_value;
+
+    asset_value = asset_type::sound;
+
+    std::cout << "asset_value = " << (int) asset_value << std::endl;
 
     std::cout << std::endl << std::endl;
     return 0;

@@ -6,9 +6,9 @@
 #include <vector>
 
 int main(){
-    std::vector<int> numbers = {12, 25, 31, 47, 58};
+    std::vector<int> lapTimes = {92, 85, 88, 90, 87};
     float average;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

@@ -6,21 +6,15 @@
 #include <vector>
 
 int main(){
-    std::vector<int> numbers = {12, 25, 31, 47, 58};
+    std::vector<int> lapTimes = {92, 85, 88, 90, 87};
     float average;
 
     average = 0.0f;
-    for (int i = 0; i < numbers.size(); i++)
-        average += numbers[i];
-    average /= numbers.size();
-    std::cout << "Average: " << average << std::endl;
-
-    average = 0.0f;
-    for (auto x : numbers)
+    for (auto x : lapTimes)
         average += x;
-    average /= numbers.size();
-    std::cout << "Average: " << average << std::endl;
+    average /= lapTimes.size();
+    std::cout << "Average Lap Time: " << average << std::endl;
        
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

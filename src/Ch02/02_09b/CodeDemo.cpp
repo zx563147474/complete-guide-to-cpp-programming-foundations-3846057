@@ -1,9 +1,11 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_09
-// Type Casting, by Eduardo Corpeño 
+// Structures, by Eduardo Corpeño 
 
 #include <iostream>
-#include <cstdint>
+#include <string>
+
+enum class character_role {protagonist, antagonist, sidekick, npc};
 
 int main(){
     

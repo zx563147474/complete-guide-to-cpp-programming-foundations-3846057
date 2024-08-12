@@ -1,26 +1,26 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 02_11
-// Type Inference with auto, by Eduardo Corpeño 
+// Type Casting Examples, by Eduardo Corpeño 
 
 #include <iostream>
-#include <typeinfo>
+#include <cstdint>
 
 int main(){
-    auto score = 8;
-    auto total_points = 12345678901;
-    auto player_height = 6.2f;
-    auto game_duration = 90.0;
-    auto is_active = true;
-    auto initial = 'P';
-    auto game_title = "Soccer Champions";
+    int fahrenheit = 100;
+    int celsius;
 
-    std::cout << "The type of score is " << typeid(score).name() << std::endl;
-    std::cout << "The type of total_points is " << typeid(total_points).name() << std::endl;
-    std::cout << "The type of player_height is " << typeid(player_height).name() << std::endl;
-    std::cout << "The type of game_duration is " << typeid(game_duration).name() << std::endl;
-    std::cout << "The type of is_active is " << typeid(is_active).name() << std::endl;
-    std::cout << "The type of initial is " << typeid(initial).name() << std::endl;
-    std::cout << "The type of game_title is " << typeid(game_title).name() << std::endl;
+    celsius = ((float)5 / 9.0) * (fahrenheit - 32);
+
+    std::cout << std::endl;
+    std::cout << "Fahrenheit: " << fahrenheit << std::endl;
+    std::cout << "Celsius   : " << celsius << std::endl;
+
+    float weight = 10.99;
+    
+    std::cout << std::endl;
+    std::cout << "Float          : " << weight << std::endl;
+    std::cout << "Integer part   : " << (int) weight << std::endl;
+    std::cout << "Fractional part: " << (int)((weight - (int)weight) * 10000) << std::endl;
 
     std::cout << std::endl << std::endl;
     return 0;

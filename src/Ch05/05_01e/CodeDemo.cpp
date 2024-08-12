@@ -5,29 +5,29 @@
 #include <iostream>
 
 int main(){
-    int a = 1023;
-    bool flag = false;
-    char lttr = 'd';
+    int score = 1023;
+    bool gamePaused = false;
+    char action = 'x';
 
-    if (a > 1000)
-        std::cout << "Warning: a is over 1000." << std::endl;
+    if (score > 1000)
+        std::cout << "Your score is over 1000." << std::endl;
 
-    if (a % 2)
-        std::cout << "a is odd" << std::endl;
+    if (score % 2)
+        std::cout << "Score is odd" << std::endl;
     else
-        std::cout << "a is even" << std::endl;
+        std::cout << "Score is even" << std::endl;
 
-    std::cout << "The letter " << lttr << " is ";
-    if (lttr != 'a' && lttr != 'e' && lttr != 'i' && lttr != 'o' && lttr != 'u' &&
-        lttr != 'A' && lttr != 'E' && lttr != 'I' && lttr != 'O' && lttr != 'U')
+    std::cout << "The action '" << action << "' is ";
+    if (action != 'a' && action != 'w' && action != 'd' && action != 's' &&
+        action != 'A' && action != 'W' && action != 'D' && action != 'S')
         std::cout << "not ";
-    std::cout << "a vowel." << std::endl;
+    std::cout << "a movement key." << std::endl;
 
-    if (flag)
-        std::cout << "The flag is true!" << std::endl;
+    if (gamePaused)
+        std::cout << "The game is paused!" << std::endl;
     else
-        std::cout << "The flag is false!" << std::endl;
+        std::cout << "The game is running!" << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }
