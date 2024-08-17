@@ -1,38 +1,39 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 06_04
+// Exercise 06_05
 // Overloading Functions, by Eduardo Corpeño 
 
 #include <iostream>
+#include <string>
 
-// Takes arguments by value
-int square(int x){
-    x = x * x;
-    return x;
+// Function to get the speed of a player
+int getSpeed(int distance, int time){
+    return distance / time;
 }
 
-// Takes arguments by address
-void swap(int *x, int *y){
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+// Overloaded function to get speed when distance is not provided
+int getSpeed(double time){
+    return static_cast<int>(100 / time); // Assuming a default distance of 100 units
 }
 
-// Takes arguments by reference
-void swap(int& x, int& y){
-    int temp = x;
-    x = y;
-    y = temp;
+// Overloaded function to get speed in a specific format
+std::string getSpeed(int distance, int time, const std::string& unit){
+    float speed = distance / (float) time;
+    return std::to_string(speed) + " " + unit;
 }
 
 int main(){
-    int a = 9, b;
-    b = square(a);
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    swap(&a, &b);
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    swap(a, b);
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    
+    int speedInt;
+    std::string speedStr;
+
+    speedInt = getSpeed(200, 4);
+    std::cout << "Speed (int): " << speedInt << std::endl;
+
+    speedInt = getSpeed(3.5);
+    std::cout << "Speed (default distance): " << speedInt << std::endl;
+
+    speedStr = getSpeed(277, 6, "meters per second");
+    std::cout << "Speed (string): " << speedStr << std::endl;
+
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

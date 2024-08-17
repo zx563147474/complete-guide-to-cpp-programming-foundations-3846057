@@ -16,7 +16,7 @@ int main(){
 
     std::cout << " Sprite X: " << sprite_x << std::endl;
     std::cout << " Screen X: " << screen_x << std::endl;
-    std::cout << "Screen ID: " << (int32_t) screen_id << std::endl;
+    std::cout << "Screen ID: " << static_cast<int32_t>(screen_id) << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;

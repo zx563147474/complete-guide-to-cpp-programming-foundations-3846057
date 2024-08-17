@@ -1,18 +1,16 @@
 // Complete Guide to C++ Programming Foundations
 // Exercise 06_04
-// Calling Functions, by Eduardo Corpeño 
+// Writing Functions, by Eduardo Corpeño 
 
 #include <iostream>
+#include <string>
 
 int main(){
-    int a = 9, b;
-    // TODO: square
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    // TODO: swap
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    // TODO: swap
-    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::string playerName = "Alex";
+    int score = 75;
+
+    std::cout << playerName << " scored " << score << " points." << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }
