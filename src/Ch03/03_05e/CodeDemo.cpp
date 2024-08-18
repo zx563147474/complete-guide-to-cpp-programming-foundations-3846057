@@ -6,10 +6,10 @@
 
 int main(){
     int ammo = 30;
-    int zombies_incoming = 20;
+    int incoming_zombies = 20;
 
     std::cout << "Initial Ammo: " << ammo << std::endl;
-    std::cout << "Initial Zombies Defeated: " << zombies_incoming << std::endl;
+    std::cout << "Initial Zombies Incoming: " << incoming_zombies << std::endl;
 
     // Addition assignment
     ammo += 10;
@@ -20,8 +20,8 @@ int main(){
     std::cout << "Ammo after using some: " << ammo << std::endl;
 
     // Multiplication assignment
-    zombies_incoming *= 2;
-    std::cout << "Zombies duplicated after timeout: " << zombies_incoming << std::endl;
+    incoming_zombies *= 2;
+    std::cout << "Zombies duplicated after timeout: " << incoming_zombies << std::endl;
 
     // Division assignment
     ammo /= 2;
