@@ -7,7 +7,7 @@
 
 enum class character_role {protagonist, antagonist, sidekick, npc};
 
-struct game_character {
+struct game_character{
     std::string name;
     int level;
     character_role role;
@@ -15,7 +15,7 @@ struct game_character {
 
 int main(){
     game_character buddy;
-    buddy.name = "Alex";
+    buddy.name = "Tony";
     buddy.level = 10;
     buddy.role = character_role::sidekick;
     
