@@ -4,13 +4,12 @@
 
 #include <iostream>
 
-// #define LEVEL_COUNT 4
+//#define LEVEL_COUNT 4
 
 int main(){
     const size_t LEVEL_COUNT = 4;
-
     int enemies[LEVEL_COUNT];
-    float levelDifficulty[] = {1.0, 1.5, 2.0, 2.5};
+    float levelDifficulty[] = {1.0, 3.5, 6.0, 10.5};
 
     enemies[0] = 10;
     enemies[1] = 15;
@@ -29,7 +28,7 @@ int main(){
     std::cout << "Level 2: " << levelDifficulty[1] << std::endl;
     std::cout << "Level 3: " << levelDifficulty[2] << std::endl;
     std::cout << "Level 4: " << levelDifficulty[3] << std::endl;
-
+    
     std::cout << std::endl << std::endl;
     return 0;
 }
