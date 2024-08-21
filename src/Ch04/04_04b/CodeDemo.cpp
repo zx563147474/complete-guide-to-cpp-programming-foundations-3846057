@@ -18,7 +18,7 @@ int main(){
 
     start = Clock::now();
 
-    std::cout << "Type 'start' as quickly as you can and hit ENTER: ";
+    std::cout << "Type 'start' as quickly as you can and hit ENTER: " << std::flush;
     std::cin >> input;
 
     end = Clock::now();

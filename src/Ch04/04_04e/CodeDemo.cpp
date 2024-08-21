@@ -18,7 +18,7 @@ int main(){
 
     start = new TimePoint(Clock::now());
 
-    std::cout << "Type 'start' as quickly as you can and hit ENTER: ";
+    std::cout << "Type 'start' as quickly as you can and hit ENTER: " << std::flush;
     std::cin >> input;
 
     end = new TimePoint(Clock::now());
