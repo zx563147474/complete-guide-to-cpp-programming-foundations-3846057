@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 06_04
-// Calling Functions, by Eduardo Corpeño 
+// Exercise 06_02
+// Passing Values to a Function, by Eduardo Corpeño 
 
 #include <iostream>
 
