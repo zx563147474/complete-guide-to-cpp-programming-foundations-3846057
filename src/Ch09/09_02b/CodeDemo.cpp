@@ -12,7 +12,7 @@ int main(){
     int number;
     char letter;
 
-    inFile.open("people.txt");
+    inFile.open("players.txt");
     if (inFile.fail())
         std::cout << std::endl << "File not found!" << std::endl;
     else{
@@ -24,5 +24,5 @@ int main(){
     }
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }
