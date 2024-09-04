@@ -1,61 +1,49 @@
 // Complete Guide to C++ Programming Foundations
 // Challenge Solution 05_10
-// Calculate a GPA, by Eduardo Corpeño 
+// Calculate Resource Cost, by Eduardo Corpeño 
 
 #include <iostream>
+#include <cstdint>
 #include <vector>
-#include "records.h"
+
+struct Resource{
+    std::string name;
+    double baseCost;
+    char type; // 'B' for Basic, 'L' for Luxury, 'E' for Essential
+};
+
+double CalculateTotalCost(std::vector<Resource> resources){
+    double result = 0.0;
+    
+    for (const auto& resource : resources){
+        double costWithTax = resource.baseCost;
+        
+        if (resource.type == 'B')      // Basic resource: 5% tax
+            costWithTax += resource.baseCost * 0.05;
+        else if (resource.type == 'L') // Luxury resource: 15% tax
+            costWithTax += resource.baseCost * 0.15;
+
+        // Essential resource 'E' has no tax, so no change is needed
+        
+        result += costWithTax;
+    }
+    
+    return result;
+}
 
 int main(){
-    float GPA = 0.0f;
-    int id;
+    
+    // Example 1 resources
+    std::vector<Resource> resources = {
+        {"Wood", 125.0, 'B'},
+        {"Gold", 200.0, 'L'},
+        {"Water", 50.0, 'E'}
+    };
 
-    std::vector<Student> students = {Student(1, "George P. Burdell"),
-                                    Student(2, "Nancy Rhodes")};
-
-    std::vector<Course> courses = {Course(1, "Algebra", 5),
-                                Course(2, "Physics", 4),
-                                Course(3, "English", 3),
-                                Course(4, "Economics", 4)};
-
-    std::vector<Grade> grades = {Grade(1, 1, 'B'), Grade(1, 2, 'A'), Grade(1, 3, 'C'),
-                                Grade(2, 1, 'A'), Grade(2, 2, 'A'), Grade(2, 4, 'B')};
-
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
-
-    float points = 0.0f, credits = 0.0f;
-    for (Grade& grd : grades)
-        if (grd.get_student_id() == id){
-            float num_grd;          // float for the numeric grade
-            switch (grd.get_grade()){
-                case 'A': num_grd = 4.0f;
-                    break;
-                case 'B': num_grd = 3.0f;
-                    break;
-                case 'C': num_grd = 2.0f;
-                    break;
-                case 'D': num_grd = 1.0f;
-                    break;
-                default:  num_grd = 0.0f;
-                    break;
-            };
-            
-            int j=0;
-            while (j < courses.size()  &&  courses[j].get_id() != grd.get_course_id())
-                j++;
-            credits += courses[j].get_credits();
-            points += num_grd * courses[j].get_credits();
-        }
-    GPA = points / credits;
-
-    std::string student_str;
-    int i = 0;
-    while (i < students.size() && students[i].get_id() != id)
-        i++;
-    student_str = students[i].get_name();
-    std::cout << "The GPA for " << student_str << " is " << GPA << std::endl;
+    double learnerResult = CalculateTotalCost(resources);
+    
+    std::cout << "Your code returned: " << learnerResult << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

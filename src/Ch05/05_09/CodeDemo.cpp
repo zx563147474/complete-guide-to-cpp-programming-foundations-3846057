@@ -1,37 +1,38 @@
 // Complete Guide to C++ Programming Foundations
 // Challenge 05_09
-// Calculate a GPA, by Eduardo Corpeño 
+// Calculate Resource Cost, by Eduardo Corpeño 
 
 #include <iostream>
+#include <cstdint>
 #include <vector>
-#include "records.h"
+
+struct Resource{
+    std::string name;
+    double baseCost;
+    char type; // 'B' for Basic, 'L' for Luxury, 'E' for Essential
+};
+
+double CalculateTotalCost(std::vector<Resource> resources){
+    double result = 0.0;
+    
+    // Write your code here
+    
+    return result;
+}
 
 int main(){
-    float GPA = 0.0f;
-    int id;
     
-    std::vector<Student> students = {Student(1, "George P. Burdell"),
-                                    Student(2, "Nancy Rhodes")};
+    // Example 1 resources
+    std::vector<Resource> resources = {
+        {"Wood", 125.0, 'B'},
+        {"Gold", 200.0, 'L'},
+        {"Water", 50.0, 'E'}
+    };
 
-    std::vector<Course> courses = {Course(1, "Algebra", 5),
-                                Course(2, "Physics", 4),
-                                Course(3, "English", 3),
-                                Course(4, "Economics", 4)};
-
-    std::vector<Grade> grades = {Grade(1, 1, 'B'), Grade(1, 2, 'A'), Grade(1, 3, 'C'),
-                                Grade(2, 1, 'A'), Grade(2, 2, 'A'), Grade(2, 4, 'B')};
-
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
-
-    // Calculate the GPA for the selected student.
-    // Write your code here
-
-    std::string student_str;
-    student_str = students[0].get_name(); // Change this to the selected student's name
-
-    std::cout << "The GPA for " << student_str << " is " << GPA << std::endl;
+    double learnerResult = CalculateTotalCost(resources);
+    
+    std::cout << "Your code returned: " << learnerResult << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

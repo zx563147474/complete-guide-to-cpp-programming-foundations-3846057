@@ -3,15 +3,24 @@
 // Data Types, by Eduardo Corpeño 
 
 #include <iostream>
+#include <cstdint>
+
+int add_int(float a, double b, long double c){
+    int result = 0;
+
+    result = (int) a + (int) b + (int) c;
+    
+    return result;
+}
 
 int main(){
-    int nums[5] = {1,23,32,24,337};
-    float result; 
+    float a = 2.1;
+    double b = 3.9;
+    long double c = 4.6;
 
-    result = nums[0] + nums[1] + nums[2] + nums[3] + nums[4];
-    result /= 5;
+    int learnerResult = add_int(a, b, c);
     
-    std::cout << "The average is " << result << std::endl;
+    std::cout << "Your code returned: " << learnerResult << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;

@@ -3,15 +3,31 @@
 // Vector Manipulation, by Eduardo Corpeño 
 
 #include <iostream>
+#include <vector>
+#include <string>
+
+std::vector<int> SelectKeyPoints(std::vector<int> distances, int checkpointIndex){
+    std::vector<int> result;
+
+    result.push_back(*distances.begin());         // Add the first element
+    result.push_back(distances[checkpointIndex]); // Add the element at checkpointIndex
+    result.push_back(distances.back());           // Add the last element
+    
+    return result;
+}
 
 int main(){
-    int nums[5] = {1,23,32,24,337};
-    float result; 
+    std::vector<int> distances = {3, 5, 4, 6, 7, 8};
+    int checkpointIndex = 4;
 
-    result = nums[0] + nums[1] + nums[2] + nums[3] + nums[4];
-    result /= 5;
-    
-    std::cout << "The average is " << result << std::endl;
+    std::vector<int> learnerResult = SelectKeyPoints(distances, checkpointIndex);
+    std::cout << "Your code returned: { ";
+    auto vectPtr = learnerResult.begin();
+    while (vectPtr != learnerResult.end()){
+        std::cout << *vectPtr << " ";
+        vectPtr = next(vectPtr, 1);
+    }
+    std::cout << "}" << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;

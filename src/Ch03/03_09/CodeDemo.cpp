@@ -3,15 +3,23 @@
 // Calculate an Average, by Eduardo Corpeño 
 
 #include <iostream>
+#include <cstdint>
+
+double my_average(int a, int8_t b, uint32_t c){
+    double result = 0.0;
+
+    result = (a + b + c) / 3.0;
+    
+    return result;
+}
 
 int main(){
-    int nums[5] = {1,23,32,24,337};
-    float result; 
-
-    result = nums[0] + nums[1] + nums[2] + nums[3] + nums[4];
-    result /= 5;
+    int a = 10;
+    int8_t b = 21;
+    uint32_t c = 30;
+    double learnerResult = my_average(a, b, c);
     
-    std::cout << "The average is " << result << std::endl;
+    std::cout << "Your code returned: " << learnerResult << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;
