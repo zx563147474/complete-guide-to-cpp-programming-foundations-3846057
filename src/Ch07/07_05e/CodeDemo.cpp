@@ -3,40 +3,120 @@
 // Using Classes, by Eduardo Corpeño 
 
 #include <iostream>
+#include <vector>
 #include <string>
+#include <algorithm>
 
-enum class cow_purpose {dairy, meat, hide, pet};
-
-class cow{
+class Inventory {
 public:
-    cow(std::string name_i, int age_i, cow_purpose purpose_i){
-        name = name_i;
-        age = age_i;
-        purpose = purpose_i;
-    }
-    std::string get_name() const{
-        return name;
-    }
-    int get_age() const{
-        return age;
-    }
-    cow_purpose get_purpose() const{
-        return purpose;
-    }
-    void set_age(int new_age){
-        age = new_age;
-    }
+    // Constructor
+    Inventory();
+
+    // Overloaded Constructor
+    Inventory(int capacity);
+
+    // Destructor
+    ~Inventory();
+
+    // Add item to inventory
+    void addItem(const std::string& item);
+
+    // Remove item from inventory
+    void removeItem(const std::string& item);
+
+    // Access item by index
+    std::string getItem(int index) const;
+
+    // Get number of items in the inventory
+    int getItemCount() const;
+
+    // Display inventory contents
+    void displayInventory() const;
+
 private:
-    std::string name;
-    int age;
-    cow_purpose purpose;
+    std::vector<std::string> *items; // Pointer to a vector of items
+    int capacity; // Maximum number of items allowed
 };
 
+// Default Constructor
+Inventory::Inventory(): capacity(10){
+    items = new std::vector<std::string>();
+}
+
+// Overloaded Constructor
+Inventory::Inventory(int capacity): capacity(capacity){
+    items = new std::vector<std::string>();
+}
+
+// Destructor
+Inventory::~Inventory(){
+    delete items; // Prevent memory leak by deallocating the dynamic vector
+}
+
+// Add item to inventory
+void Inventory::addItem(const std::string& item){
+    if (items->size() < capacity)
+        items->push_back(item);
+    else
+        std::cout << "Inventory is full, cannot add " << item << std::endl;
+}
+
+// Remove item from inventory
+void Inventory::removeItem(const std::string& item){
+    auto it = std::find(items->begin(), items->end(), item);
+    if (it != items->end())
+        items->erase(it);
+    else
+        std::cout << "Item " << item << " not found in inventory" << std::endl;
+}
+
+// Access item by index
+std::string Inventory::getItem(int index) const{
+    if (index >= 0 && index < items->size())
+        return (*items)[index];
+    else
+        return "Index out of bounds";
+}
+
+// Get number of items in the inventory
+int Inventory::getItemCount() const{
+    return items->size();
+}
+
+// Display inventory contents
+void Inventory::displayInventory() const{
+    std::cout << "Inventory: [ ";
+    for (size_t i = 0; i < items->size(); ++i){
+        std::cout << (*items)[i];
+        if (i < items->size() - 1) std::cout << ", ";
+    }
+    std::cout << " ]" << std::endl;
+}
+
 int main(){
-    cow my_cow("Hildy", 7, cow_purpose::pet);
-    std::cout << my_cow.get_name() << " is a type-" << (int) my_cow.get_purpose() << " cow." << std::endl;
-    std::cout << my_cow.get_name() << " is " << my_cow.get_age() << " years old." << std::endl;
-    
+    Inventory myInventory(5); // Create an inventory with capacity of 5 items
+
+    myInventory.addItem("Health Potion"); // Add items
+    myInventory.addItem("Mana Potion");
+    myInventory.addItem("Sword");
+    myInventory.addItem("Shield");
+    myInventory.addItem("Bow");
+
+    myInventory.displayInventory(); // Display current inventory
+
+    myInventory.removeItem("Mana Potion"); // Remove an item
+    myInventory.displayInventory();
+
+    std::cout << "The inventory contains: " << myInventory.getItemCount() << " items." << std::endl;
+
+    std::cout << "Item at index 2: " << myInventory.getItem(2) << std::endl; // Access item by index
+
+    // Try to add another item when inventory is full
+    myInventory.addItem("Arrow");
+
+    // Display final state of inventory
+    myInventory.displayInventory();
+
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

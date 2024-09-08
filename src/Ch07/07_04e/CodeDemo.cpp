@@ -4,40 +4,75 @@
 
 #include <iostream>
 #include <vector>
-#include "records.h"
+#include <string>
+#include <algorithm>
+
+class Inventory {
+public:
+    // Default Constructor
+    Inventory(){
+        capacity = 10;
+        items = new std::vector<std::string>();
+    }
+
+    // Overloaded Constructor
+    Inventory(int capacity){
+        this->capacity = capacity;
+        items = new std::vector<std::string>();
+    }
+
+    // Destructor
+    ~Inventory(){
+        delete items; // Prevent memory leak by deallocating the dynamic vector
+    }
+
+    // Add item to inventory
+    void addItem(const std::string& item){
+        if (items->size() < capacity)
+            items->push_back(item);
+        else
+            std::cout << "Inventory is full, cannot add " << item << std::endl;
+    }
+
+    // Remove item from inventory
+    void removeItem(const std::string& item){
+        auto it = std::find(items->begin(), items->end(), item);
+        if (it != items->end())
+            items->erase(it);
+        else
+            std::cout << "Item " << item << " not found in inventory" << std::endl;
+    }
+
+    // Access item by index
+    std::string getItem(int index) const{
+        if (index >= 0 && index < items->size())
+            return (*items)[index];
+        else
+            return "Index out of bounds";
+    }
+
+    // Get number of items in the inventory
+    int getItemCount() const{
+        return items->size();
+    }
+
+    // Display inventory contents
+    void displayInventory() const{
+        std::cout << "Inventory: [ ";
+        for (size_t i = 0; i < items->size(); ++i){
+            std::cout << (*items)[i];
+            if (i < items->size() - 1) std::cout << ", ";
+        }
+        std::cout << " ]" << std::endl;
+    }
+
+private:
+    std::vector<std::string> *items; // Pointer to a vector of items
+    int capacity; // Maximum number of items allowed
+};
 
 int main(){
-    float GPA = 0.0f;
-    int id;
-
-    std::vector<Student> students = {Student(1, "George P. Burdell"),
-                                    Student(2, "Nancy Rhodes")};
-
-    std::vector<Course> courses = {Course(1, "Algebra", 5),
-                                Course(2, "Physics", 4),
-                                Course(3, "English", 3),
-                                Course(4, "Economics", 4)};
-
-    std::vector<Grade> grades = {Grade(1, 1, 'B'), Grade(1, 2, 'A'), Grade(1, 3, 'C'),
-                                Grade(2, 1, 'A'), Grade(2, 2, 'A'), Grade(2, 4, 'B')};
-
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
-
-    float points = 0.0f, credits = 0.0f;
-    for (Grade& grd : grades)
-        if (grd.get_student_id() == id){
-            // TODO: get numeric grade
-            float num_grd = 0.0f;
-            // TODO: credits += get_credits
-            points += num_grd * courses[0].get_credits();
-        }
-    GPA = points / credits;
-
-    // TODO: get student name
-    std::string student_str = "";
-    std::cout << "The GPA for " << student_str << " is " << GPA << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

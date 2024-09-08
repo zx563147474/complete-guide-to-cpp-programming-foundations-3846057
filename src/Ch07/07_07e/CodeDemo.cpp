@@ -2,15 +2,33 @@
 // Exercise 03_05
 // Using Several Source Files, by Eduardo Corpeño 
 
+#include "inventory.hpp"
 #include <iostream>
-#include <string>
-#include "cow.h"
 
 int main(){
-    cow my_cow("Hildy", 7, cow_purpose::pet);
-    std::cout << my_cow.get_name() << " is a type-" << (int) my_cow.get_purpose() << " cow." << std::endl;
-    std::cout << my_cow.get_name() << " is " << my_cow.get_age() << " years old." << std::endl;
-    
+    Inventory myInventory(5); // Create an inventory with capacity of 5 items
+
+    myInventory.addItem("Health Potion"); // Add items
+    myInventory.addItem("Mana Potion");
+    myInventory.addItem("Sword");
+    myInventory.addItem("Shield");
+    myInventory.addItem("Bow");
+
+    myInventory.displayInventory(); // Display current inventory
+
+    myInventory.removeItem("Mana Potion"); // Remove an item
+    myInventory.displayInventory();
+
+    std::cout << "The inventory contains: " << myInventory.getItemCount() << " items." << std::endl;
+
+    std::cout << "Item at index 2: " << myInventory.getItem(2) << std::endl; // Access item by index
+
+    // Try to add another item when inventory is full
+    myInventory.addItem("Arrow");
+
+    // Display final state of inventory
+    myInventory.displayInventory();
+
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

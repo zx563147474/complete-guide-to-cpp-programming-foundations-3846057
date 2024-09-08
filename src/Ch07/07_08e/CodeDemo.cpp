@@ -2,41 +2,33 @@
 // Exercise 07_08
 // Operator Overload, by Eduardo Corpeño 
 
+#include "inventory.hpp"
 #include <iostream>
-#include <vector>
-#include "records.h"
-
-void initialize(StudentRecords&);
 
 int main(){
-    int id;
-    StudentRecords SR;
-    
-    initialize(SR);
+    Inventory myInventory(5); // Create an inventory with capacity of 5 items
 
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
+    myInventory += "Health Potion"; // Add items
+    myInventory += "Mana Potion";
+    myInventory += "Sword";
+    myInventory += "Shield";
+    myInventory += "Bow";
 
-    std::string student_str = SR.get_student_name(id);
-    std::cout << "The GPA for " << student_str << " is " << SR.get_GPA(id) << std::endl;
-    
+    myInventory.displayInventory(); // Display current inventory
+
+    myInventory -= "Mana Potion"; // Remove an item
+    myInventory.displayInventory();
+
+    std::cout << "The inventory contains: " << myInventory.getItemCount() << " items." << std::endl; // Access item by index
+
+    std::cout << "Item at index 2: " << myInventory[2] << std::endl; // Access item by index
+
+    // Try to add another item when inventory is full
+    myInventory += "Arrow";
+
+    // Display final state of inventory
+    myInventory.displayInventory();
+
     std::cout << std::endl << std::endl;
-    return (0);
-}
-
-void initialize(StudentRecords& srec){
-    srec.add_student(1, "George P. Burdell");
-    srec.add_student(2, "Nancy Rhodes");
-
-    srec.add_course(1, "Algebra", 5);
-    srec.add_course(2, "Physics", 4);
-    srec.add_course(3, "English", 3);
-    srec.add_course(4, "Economics", 4);
-
-    srec.add_grade(1, 1, 'B');
-    srec.add_grade(1, 2, 'A');
-    srec.add_grade(1, 3, 'C');
-    srec.add_grade(2, 1, 'A'); 
-    srec.add_grade(2, 2, 'A');
-    srec.add_grade(2, 4, 'B');
+    return 0;
 }
