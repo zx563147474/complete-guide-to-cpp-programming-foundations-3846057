@@ -1,4 +1,4 @@
-#include "inventory.hpp"
+#include "inventory.h"
 #include <iostream>
 
 // Default Constructor
@@ -7,7 +7,7 @@ Inventory::Inventory(): capacity(10){
 }
 
 // Overloaded Constructor
-Inventory::Inventory(int capacity): capacity(capacity){
+Inventory::Inventory(int capacity_i): capacity(capacity_i){
     items = new std::vector<std::string>();
 }
 

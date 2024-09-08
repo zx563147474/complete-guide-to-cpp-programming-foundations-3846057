@@ -2,7 +2,7 @@
 // Exercise 03_05
 // Using Several Source Files, by Eduardo Corpeño 
 
-#include "inventory.hpp"
+#include "inventory.h"
 #include <iostream>
 
 int main(){

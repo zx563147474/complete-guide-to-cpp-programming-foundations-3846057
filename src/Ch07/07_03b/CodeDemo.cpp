@@ -1,10 +1,11 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 07_02
-// Data Members, by Eduardo Corpeño 
+// Exercise 07_03
+// Function Members, by Eduardo Corpeño 
 
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 class Inventory{
 private:

@@ -2,7 +2,7 @@
 // Exercise 07_08
 // Operator Overload, by Eduardo Corpeño 
 
-#include "inventory.hpp"
+#include "inventory.h"
 #include <iostream>
 
 int main(){

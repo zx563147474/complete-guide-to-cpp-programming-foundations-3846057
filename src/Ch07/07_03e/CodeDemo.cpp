@@ -7,7 +7,7 @@
 #include <string>
 #include <algorithm>
 
-class Inventory {
+class Inventory{
 public:
     // Add item to inventory
     void addItem(const std::string& item){
