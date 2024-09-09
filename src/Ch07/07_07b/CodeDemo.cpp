@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 07_05
-// Using Classes, by Eduardo Corpeño 
+// Exercise 07_07
+// Using Several Source Files, by Eduardo Corpeño 
 
 #include <iostream>
 #include <vector>
@@ -87,7 +87,7 @@ int main(){
     myInventory.addItem("Arrow");
 
     // Remove an item
-    myInventory.removeItem("Mana Potion"); 
+    myInventory.removeItem("Mana Potion");
 
     // Display the item count
     std::cout << "The inventory now contains: " << myInventory.getItemCount() << " items." << std::endl;

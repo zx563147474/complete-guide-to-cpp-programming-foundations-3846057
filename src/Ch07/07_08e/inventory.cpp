@@ -1,5 +1,4 @@
 #include "inventory.h"
-#include <iostream>
 
 // Default Constructor
 Inventory::Inventory(): capacity(10){

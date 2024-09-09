@@ -1,6 +1,6 @@
 // Complete Guide to C++ Programming Foundations
-// Exercise 07_07
-// Using Several Source Files, by Eduardo Corpeño 
+// Exercise 07_08
+// Operator Overload, by Eduardo Corpeño 
 
 #include "inventory.h"
 #include <iostream>
@@ -23,7 +23,7 @@ int main(){
     myInventory.addItem("Arrow");
 
     // Remove an item
-    myInventory.removeItem("Mana Potion");
+    myInventory.removeItem("Mana Potion"); 
 
     // Display the item count
     std::cout << "The inventory now contains: " << myInventory.getItemCount() << " items." << std::endl;

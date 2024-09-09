@@ -70,25 +70,21 @@ private:
 };
 
 int main(){
-    Inventory myInventory(5); // Create an inventory with capacity of 5 items
+    // Create an inventory with capacity of 5 items
+    Inventory myInventory(5); 
+    
+    // Add 5 items
 
-    myInventory.addItem("Health Potion"); // Add items
-    myInventory.addItem("Mana Potion");
-    myInventory.addItem("Sword");
-    myInventory.addItem("Shield");
-    myInventory.addItem("Bow");
-
-    myInventory.displayInventory(); // Display current inventory
-
-    myInventory.removeItem("Mana Potion"); // Remove an item
-    myInventory.displayInventory();
-
-    std::cout << "The inventory contains: " << myInventory.getItemCount() << " items." << std::endl;
-
-    std::cout << "Item at index 2: " << myInventory.getItem(2) << std::endl; // Access item by index
+    // Display current inventory
+    myInventory.displayInventory(); 
 
     // Try to add another item when inventory is full
-    myInventory.addItem("Arrow");
+
+    // Remove an item
+
+    // Display the item count
+
+    // Access item by index
 
     // Display final state of inventory
     myInventory.displayInventory();

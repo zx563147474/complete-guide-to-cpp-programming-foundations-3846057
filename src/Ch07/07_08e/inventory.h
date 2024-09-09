@@ -1,9 +1,12 @@
+#pragma once
+
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <iostream>
 
 class Inventory{
 public:
