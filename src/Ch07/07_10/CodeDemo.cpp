@@ -1,20 +1,38 @@
 // Complete Guide to C++ Programming Foundations
 // Challenge 07_10
-// Create a Complex Number Class, by Eduardo Corpeño 
+// Design a Person Class, by Eduardo Corpeño 
 
 #include <iostream>
-#include "records.h"
+#include <cstdint>
+#include <vector>
+#include <string>
+#include <utility>
+
+class Person{
+    // Write your code here
+};
 
 int main(){
-    Student my_student(1, "Hilda Jones");
-    Course my_course(7, "Physics 101", 4);
-    Grade my_grade(1, 7, 'B');
+    // Example 1
+    std::string name = "Alice";
+    float energy = 40;
+    float happiness = 22;
+    float health = 80;
 
-    std::cout << "Student: " << my_student.get_name() << std::endl;
-    std::cout << "Course: " << my_course.get_name() << std::endl;
-    std::cout << "Credits: " << my_course.get_credits() << std::endl;
-    std::cout << "Grade: " << my_grade.get_grade() << std::endl;
+    float calories = 300;
+    float playMinutes = 120;
+    float sleepHours = 5;
+
+    Person sporty(name, energy, happiness, health);
+    sporty.Eat(calories);
+    sporty.Play(playMinutes);
+    sporty.Sleep(sleepHours);
+
+    std::cout << "Your code returned: { ";
+    std::cout << "Energy: " << sporty.GetEnergy() << ", ";
+    std::cout << "Happiness: " << sporty.GetHappiness() << ", ";
+    std::cout << "Health: " << sporty.GetHealth() << " }" << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }

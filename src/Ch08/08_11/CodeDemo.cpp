@@ -1,61 +1,70 @@
 // Complete Guide to C++ Programming Foundations
 // Challenge Solution 08_11
-// Web Browser Navigation Buttons, by Eduardo Corpeño
+// Virtual Pet Schedule, by Eduardo Corpeño
 
 #include <iostream>
+#include <cstdint>
 #include <vector>
-#include "records.h"
+#include <deque>
+#include <string>
+#include <utility>
+
+template <typename T> using deque = std::deque<T>;
+template <typename T> using vector = std::vector<T>;
+template <typename T1, typename T2> using pair = std::pair<T1, T2>;
+using string = std::string;
+
+// Enum class for operations
+enum class Operation{
+    ADD_FRONT,
+    ADD_BACK,
+    REMOVE_FRONT,
+    REMOVE_BACK
+};
+
+deque<pair<string, int>> ManagePetSchedule(const deque<pair<string, int>>& initialActivities, const vector<pair<Operation, pair<string, int>>>& operations){
+    deque<pair<string, int>> schedule = initialActivities;  // Initialize the schedule
+
+    for (const auto& op : operations){
+        switch (op.first) {
+            case Operation::ADD_FRONT:
+                schedule.push_front(op.second);
+                break;
+            case Operation::ADD_BACK:
+                schedule.push_back(op.second);
+                break;
+            case Operation::REMOVE_FRONT:
+                if (!schedule.empty())
+                    schedule.pop_front();
+                break;
+            case Operation::REMOVE_BACK:
+                if (!schedule.empty())
+                    schedule.pop_back();
+                break;
+        }
+    }
+
+    return schedule;
+}
 
 int main(){
-    float GPA = 0.0f;
-    int id;
+    // Example 1
+    deque<pair<string, int>> initialActivities = {{"Photograph",20},{"Play",45},{"Sleep",60}};
+    vector<pair<Operation, pair<string, int>>> operations = {
+        {Operation::REMOVE_FRONT, {"", 0}}, 
+        {Operation::ADD_FRONT, {"Eat", 15}}, 
+        {Operation::ADD_BACK, {"Groom", 45}} 
+    };
 
-    std::vector<Student> students = {Student(1, "George P. Burdell"),
-                                    Student(2, "Nancy Rhodes")};
+    deque<pair<string, int>> learnerResult = ManagePetSchedule(initialActivities, operations);
 
-    std::vector<Course> courses = {Course(1, "Algebra", 5),
-                                Course(2, "Physics", 4),
-                                Course(3, "English", 3),
-                                Course(4, "Economics", 4)};
+    std::cout << "Your code returned: { ";
 
-    std::vector<Grade> grades = {Grade(1, 1, 'B'), Grade(1, 2, 'A'), Grade(1, 3, 'C'),
-                                Grade(2, 1, 'A'), Grade(2, 2, 'A'), Grade(2, 4, 'B')};
-
-    std::cout << "Enter a student ID: " << std::flush;
-    std::cin >> id;
-
-    float points = 0.0f, credits = 0.0f;
-    for (Grade& grd : grades)
-        if (grd.get_student_id() == id){
-            float num_grd;          // float for the numeric grade
-            switch (grd.get_grade()){
-                case 'A': num_grd = 4.0f;
-                    break;
-                case 'B': num_grd = 3.0f;
-                    break;
-                case 'C': num_grd = 2.0f;
-                    break;
-                case 'D': num_grd = 1.0f;
-                    break;
-                default:  num_grd = 0.0f;
-                    break;
-            };
-            
-            int j=0;
-            while (j < courses.size()  &&  courses[j].get_id() != grd.get_course_id())
-                j++;
-            credits += courses[j].get_credits();
-            points += num_grd * courses[j].get_credits();
-        }
-    GPA = points / credits;
-
-    std::string student_str;
-    int i = 0;
-    while (i < students.size() && students[i].get_id() != id)
-        i++;
-    student_str = students[i].get_name();
-    std::cout << "The GPA for " << student_str << " is " << GPA << std::endl;
+    for (const auto& activity : learnerResult)
+        std::cout << "{" << activity.first << ", " << activity.second << "} ";
+    
+    std::cout << "}" << std::endl;
     
     std::cout << std::endl << std::endl;
-    return (0);
+    return 0;
 }
