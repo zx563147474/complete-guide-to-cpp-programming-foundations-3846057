@@ -10,7 +10,7 @@
 class Inventory{
 public:
     // Default Constructor
-    Inventory(): capacity(capacity){
+    Inventory(): capacity(10){
         items = new std::vector<std::string>();
     }
 
