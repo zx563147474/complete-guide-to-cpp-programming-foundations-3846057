@@ -9,7 +9,6 @@
 #include <string>
 #include <utility>
 
-
 template <typename T> using deque = std::deque<T>;
 template <typename T> using vector = std::vector<T>;
 template <typename T1, typename T2> using pair = std::pair<T1, T2>;
