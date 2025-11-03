@@ -20,8 +20,8 @@ int main(){
     std::cout << "==========" << std::endl;
     std::cout << size_in_bits((short)42) << std::endl;    // Short
     std::cout << size_in_bits(123456789L) << std::endl;   // Long
-    std::cout << size_in_bits(std::string("Hello")) << std::endl; // String
-    std::cout << size_in_bits(true) << std::endl; // Bool
+    std::cout << size_in_bits(std::string("Helloooo")) << std::endl; // String
+    std::cout << size_in_bits(false) << std::endl; // Bool
 
     std::cout << std::endl << std::endl;
     return 0;
